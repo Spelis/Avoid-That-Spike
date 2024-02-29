@@ -5,9 +5,7 @@ Created with Raylib.
 
 # Showcase Video:
 
-<video controls>
-  <source src="https://raw.githubusercontent.com/Spelis/Avoid-That-Spike/main/video.webm" type="video/mp4">
-</video>
+[showcase.webm](https://github.com/Spelis/Avoid-That-Spike/assets/152774420/8d213df5-d0a4-430b-8234-f12363d97d91)
 
 # Building:
 ## Prerequisites:
