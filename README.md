@@ -3,6 +3,12 @@
 Flap around and bounce off of walls while avoiding spikes and collecting coins!
 Created with Raylib.
 
+# Showcase Video:
+
+<video controls>
+  <source src="https://raw.githubusercontent.com/Spelis/Avoid-That-Spike/main/video.webm" type="video/mp4">
+</video>
+
 # Building:
 ## Prerequisites:
 * gnu make
