@@ -13,6 +13,6 @@ Created with Raylib.
 1. clone the repo
 2. enter a terminal
 3. `cd` into the repo
-4. run `make` and it should work
+4. run `make {windows/linux}` and it should work
 5. run `./main` in your shell or double click the `main` binary file in a file manager
 6. have fun (or not!)
