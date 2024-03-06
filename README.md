@@ -20,3 +20,6 @@ Created with Raylib.
 4. run `make` and it should work
 5. run `./main` in your shell or double click the `main` binary file in a file manager
 6. have fun (or not!)
+
+
+if anyone wants to try and compile it to windows, hit me up if you're successful
