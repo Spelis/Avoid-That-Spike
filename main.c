@@ -2,6 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <coin.h>
+#include <die.h>
+#include <jump.h>
+#include <level.h>
 
 // Variables
 float playerX = 30;
@@ -16,6 +20,10 @@ int spikes[10];
 int coins = 0;
 
 // Sound FXs
+Wave diew = { 0 };
+Wave jumpw = { 0 };
+Wave levelupw = { 0 };
+Wave coinw = { 0 };
 Sound die;
 Sound jump;
 Sound levelup;
@@ -141,6 +149,7 @@ void CollideSpikes() {
 }
 
 int main(void) {
+
   srand(time(NULL));
   InitWindow(600, 600, "Avoid That Spike!");
   InitAudioDevice();
@@ -148,10 +157,34 @@ int main(void) {
   SetExitKey(0);
   HideCursor();
 
-  die = LoadSound("die.wav");
-  jump = LoadSound("jump.wav");
-  levelup = LoadSound("level.wav");
-  coin = LoadSound("coin.wav");
+  diew.frameCount = DIE_FRAME_COUNT;
+  diew.sampleRate = DIE_SAMPLE_RATE;
+  diew.sampleSize = DIE_SAMPLE_SIZE;
+  diew.channels = DIE_CHANNELS;
+  diew.data = DIE_DATA;
+  die = LoadSoundFromWave(diew);
+
+  jumpw.frameCount = JUMP_FRAME_COUNT;
+  jumpw.sampleRate = JUMP_SAMPLE_RATE;
+  jumpw.sampleSize = JUMP_SAMPLE_SIZE;
+  jumpw.channels = JUMP_CHANNELS;
+  jumpw.data = JUMP_DATA;
+  jump = LoadSoundFromWave(jumpw);
+
+  levelupw.frameCount = LEVEL_FRAME_COUNT;
+  levelupw.sampleRate = LEVEL_SAMPLE_RATE;
+  levelupw.sampleSize = LEVEL_SAMPLE_SIZE;
+  levelupw.channels = LEVEL_CHANNELS;
+  levelupw.data = LEVEL_DATA;
+  levelup = LoadSoundFromWave(levelupw);
+
+  coinw.frameCount = COIN_FRAME_COUNT;
+  coinw.sampleRate = COIN_SAMPLE_RATE;
+  coinw.sampleSize = COIN_SAMPLE_SIZE;
+  coinw.channels = COIN_CHANNELS;
+  coinw.data = COIN_DATA;
+  coin = LoadSoundFromWave(coinw);
+
   reSpike();
 
   while (!WindowShouldClose()) {
